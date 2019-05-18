@@ -1,12 +1,12 @@
-import React from "react";
-import "./config/ReactotronConfig";
-import { Provider } from "react-redux";
+import React from 'react';
+import './config/ReactotronConfig';
+import { Provider } from 'react-redux';
 
-import store from "./store";
+import store from './store';
 
-import TodoList from "./TodoList";
+import TodoList from './TodoList';
 
-console.tron.log({ hello: "test" });
+console.tron.log({ hello: 'test' });
 const App = () => (
   <Provider store={store}>
     <TodoList />

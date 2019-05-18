@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as TodoActions from "./store/actions/todos";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as TodoActions from './store/actions/todos';
 
 const TodoList = ({ todos, addTodo, removeTodo }) => (
   <>
@@ -17,7 +17,7 @@ const TodoList = ({ todos, addTodo, removeTodo }) => (
         </li>
       ))}
     </ul>
-    <button type="submit" onClick={() => addTodo("New text")}>
+    <button type="submit" onClick={() => addTodo('New text')}>
       Add
     </button>
   </>
@@ -29,19 +29,18 @@ TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
-      text: PropTypes.string
-    })
-  ).isRequired
+      text: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 const mapStateToProps = state => ({
-  todos: state.todos
+  todos: state.todos,
 });
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(TodoActions, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(TodoActions, dispatch);
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TodoList);
