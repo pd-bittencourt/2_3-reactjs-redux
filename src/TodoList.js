@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
-import { dispatch } from "rxjs/internal/observable/range";
 
 const TodoList = ({ todos, addTodo }) => (
   <>
@@ -18,7 +17,7 @@ const TodoList = ({ todos, addTodo }) => (
 );
 
 TodoList.propTypes = {
-  addTodos: PropTypes.func.isRequired,
+  addTodo: PropTypes.func.isRequired,
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
