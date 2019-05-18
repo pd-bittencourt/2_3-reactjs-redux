@@ -5,7 +5,7 @@ import reducers from './reducers';
 const composer = process.env.NODE_ENV === 'development'
   ? compose(
     applyMiddleware(...[]),
-    console.tron.createEnhancer(),
+    // console.tron.createEnhancer(),
   )
   : applyMiddleware(...[]);
 

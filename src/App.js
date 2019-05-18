@@ -4,9 +4,12 @@ import { Provider } from 'react-redux';
 import './config/ReactotronConfig';
 import store from './store';
 
+// import Routes from './routes';
+
 const App = () => (
   <Provider store={store}>
-    <h1>Hello new</h1>
+    {/* <Routes /> */}
+    <h1>Hello</h1>
   </Provider>
 );
 
