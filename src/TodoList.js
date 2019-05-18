@@ -12,10 +12,12 @@ const TodoList = ({ todos }) => (
 );
 
 TodoList.propTypes = {
-  todos: PropTypes.shape({
-    id: PropTypes.number,
-    text: PropTypes.string
-  }).isRequired
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      text: PropTypes.string
+    })
+  ).isRequired
 };
 
 const mapStateToProps = state => ({
