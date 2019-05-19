@@ -6,5 +6,7 @@ if (process.env.NODE_ENV === 'development') {
     .use(reactotronRedux())
     .connect();
 
+  console.tron = tron;
+
   tron.clear();
 }
