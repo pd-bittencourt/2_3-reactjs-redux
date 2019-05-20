@@ -32,6 +32,7 @@ class Main extends Component {
           />
           <button type="submit">Adicionar</button>
           {favorites.loading && <span>Carregando...</span>}
+          {!!favorites.error && <span>{favorites.error}</span>}
         </form>
 
         <ul>
@@ -48,6 +49,11 @@ class Main extends Component {
     );
   }
 }
+Main.defaultProps = {
+  favorites: PropTypes.shape({
+    error: null,
+  }),
+};
 
 Main.propTypes = {
   addFavoriteRequest: PropTypes.func.isRequired,
@@ -61,7 +67,8 @@ Main.propTypes = {
         url: PropTypes.string,
       }),
     ),
-  }).isRequired,
+    error: PropTypes.string,
+  }),
 };
 
 const mapStateToProps = state => ({
