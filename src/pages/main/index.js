@@ -41,6 +41,8 @@ class Main extends Component {
               <p>
                 <strong>{fav.name}</strong> ({fav.description})
               </p>
+              <p>STARS: {fav.stars}</p>
+              <p>FORKS: {fav.forks}</p>
               <a href={fav.url}>Acessar</a>
             </li>
           ))}

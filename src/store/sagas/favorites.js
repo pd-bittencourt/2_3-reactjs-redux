@@ -18,6 +18,8 @@ export function* addFavorite(action) {
         name: data.full_name,
         description: data.description,
         url: data.html_url,
+        stars: data.stargazers_count,
+        forks: data.forks_count,
       };
 
       yield put(FavoriteActions.addFavoriteSuccess(repositoryData));
